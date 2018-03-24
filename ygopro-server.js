@@ -629,10 +629,12 @@
         if (rule.match(/(^|，|,)(M|MATCH)(，|,|$)/)) {
           this.hostinfo.mode = 1;
         }
+/*
         if (rule.match(/(^|，|,)(T|TAG)(，|,|$)/)) {
           this.hostinfo.mode = 2;
           this.hostinfo.start_lp = 16000;
         }
+*/
         if (rule.match(/(^|，|,)(TCGONLY|TO)(，|,|$)/)) {
           this.hostinfo.rule = 1;
           this.hostinfo.lflist = _.findIndex(lflists, function(list) {
