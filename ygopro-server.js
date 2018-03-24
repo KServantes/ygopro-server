@@ -410,7 +410,8 @@
   ROOM_find_or_create_by_name = function(name, player_ip) {
     var room, uname;
     uname = name.toUpperCase();
-    if (settings.modules.windbot.enabled && (uname.slice(0, 2) === 'AI' || (!settings.modules.random_duel.enabled && uname === ''))) {
+    //if (settings.modules.windbot.enabled && (uname.slice(0, 2) === 'AI' || (!settings.modules.random_duel.enabled && uname === ''))) {
+    if (settings.modules.windbot.enabled) {
       return ROOM_find_or_create_ai(name);
     }
     if (settings.modules.random_duel.enabled && (uname === '' || uname === 'S' || uname === 'M' || uname === 'T')) {
